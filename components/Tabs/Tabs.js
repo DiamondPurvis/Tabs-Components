@@ -48,12 +48,15 @@ class TabItem {
 
   select() {
     // Select all ".tabs-item" elements from the DOM
-    // const items;
+    // 
+    const items = document.getElementsByClassName('tabs-item');
 
     // Remove the class "tabs-item-selected" from each element
+    this.element.classList.remove('tabs-item-selected');
     
     // Add a class named "tabs-item-selected" to this element
-    //this.element;
+    //
+    this.element.classList.add('tabs-item-selected');
   }
 }
 
@@ -67,4 +70,5 @@ class TabItem {
 
 */
 
-links = document.querySelectorAll();
+links = document.querySelectorAll('.tabs-link');
+links.forEach(link => new TabLink (link));
